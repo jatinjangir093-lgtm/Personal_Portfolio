@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Personal portfolio of Jatin Jangir — Engineering student passionate about programming, software development, AI/ML, and digital experiences.">
+  <title>Jatin Jangir | Developer Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Immediate Theme Initializer to Prevent Flash -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('portfolio-theme');
+      if (savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#home" class="brand-logo" aria-label="Jatin Jangir Home">
+        <span class="logo-mark">&lt;JJ/&gt;</span>
+        <span class="logo-text">Jatin Jangir</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions: Quick Social Links + Theme Toggle -->
+      <div class="header-socials">
+        <a href="https://github.com/jatinjangir093-lgtm" target="_blank" rel="noopener noreferrer"
+          class="header-social-link" aria-label="Jatin Jangir on GitHub" title="GitHub: jatinjangir093-lgtm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/jatin-jangir-421511385/" target="_blank" rel="noopener noreferrer"
+          class="header-social-link" aria-label="Jatin Jangir on LinkedIn" title="LinkedIn: Jatin Jangir">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Switch to light theme"
+          title="Toggle light and dark mode">
+          <svg class="theme-icon sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span class="visually-hidden">Switch Theme</span>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+        aria-controls="mobile-menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        <li><a href="https://github.com/jatinjangir093-lgtm" target="_blank" rel="noopener noreferrer"
+            class="mobile-nav-link">GitHub Profile &nearr;</a></li>
+        <li><a href="https://www.linkedin.com/in/jatin-jangir-421511385/" target="_blank" rel="noopener noreferrer"
+            class="mobile-nav-link">LinkedIn Profile &nearr;</a></li>
+        <li>
+          <button class="mobile-theme-btn" id="mobile-theme-btn" type="button" aria-label="Toggle light and dark mode">
+            <svg class="theme-icon sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="theme-icon moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <span id="mobile-theme-label">Switch to Light Mode</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section 1: Home / Hero -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Engineering Student &bull; Portfolio</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Jatin Jangir</span>
+          </h1>
+
+          <p class="hero-headline">
+            Engineering ideas into digital experiences.
+          </p>
+
+          <p class="hero-intro">
+            I am an engineering student interested in programming, software development, Artificial Intelligence,
+            Machine Learning, and creating useful digital experiences.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Contact Me</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Professional Links (Verified Profile URLs) -->
+          <div class="hero-socials">
+            <span class="social-label">Profiles:</span>
+            <div class="social-links-wrap">
+              <a href="https://github.com/jatinjangir093-lgtm" target="_blank" rel="noopener noreferrer"
+                class="social-chip" aria-label="Visit Jatin Jangir's GitHub Profile">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+                <span>GitHub</span>
+                <span class="pill-badge external-badge">@jatinjangir093-lgtm</span>
+              </a>
+              <a href="https://www.linkedin.com/in/jatin-jangir-421511385/" target="_blank" rel="noopener noreferrer"
+                class="social-chip" aria-label="Visit Jatin Jangir's LinkedIn Profile">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                <span>LinkedIn</span>
+                <span class="pill-badge external-badge">Connect</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Abstract Developer Hero Graphic -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="code-card">
+            <div class="code-card-header">
+              <div class="code-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="code-title">developer_profile.py</span>
+              <span class="code-lang">Python</span>
+            </div>
+            <div class="code-card-body">
+              <pre><code><span class="tok-kw">class</span> <span class="tok-class">Developer</span>:
+    <span class="tok-kw">def</span> <span class="tok-func">__init__</span>(<span class="tok-param">self</span>):
+        <span class="tok-param">self</span>.name = <span class="tok-str">"Jatin Jangir"</span>
+        <span class="tok-param">self</span>.role = <span class="tok-str">"Engineering Student"</span>
+        <span class="tok-param">self</span>.focus = [
+            <span class="tok-str">"Software Development"</span>,
+            <span class="tok-str">"Artificial Intelligence"</span>,
+            <span class="tok-str">"Machine Learning"</span>
+        ]
+        <span class="tok-param">self</span>.status = <span class="tok-str">"Building &amp; Learning"</span>
+
+    <span class="tok-kw">def</span> <span class="tok-func">motto</span>(<span class="tok-param">self</span>):
+        <span class="tok-kw">return</span> <span class="tok-str">"Engineering ideas into digital experiences."</span></code></pre>
+            </div>
+            <div class="code-card-footer">
+              <div class="card-chip"><span class="chip-dot"></span> Active Workspace</div>
+              <div class="card-chip">Step 1 &bull; IA Project</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: About Me -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Background</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative-card">
+            <h3 class="about-card-title">Curiosity &bull; Engineering &bull; Impact</h3>
+            <p class="about-text">
+              I am an engineering student with a dedicated focus on programming, software design, and modern computing.
+              My academic journey is driven by a deep curiosity about how digital systems function under the hood and
+              how software can be architected to solve real-world problems.
+            </p>
+            <p class="about-text">
+              My core interests include software development, Artificial Intelligence, and Machine Learning. I believe
+              that hands-on project building—from writing clean algorithms to debugging and integrating intelligent
+              tools—is the most effective way to deepen engineering capabilities.
+            </p>
+            <p class="about-text note-text">
+              <em>Note: Academic institution, specific department, and graduation year details can be customized here as
+                additional details are provided.</em>
+            </p>
+          </div>
+
+          <div class="about-highlights-grid">
+            <div class="highlight-card">
+              <div class="highlight-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h4 class="highlight-title">Software Development</h4>
+              <p class="highlight-desc">Developing structured, maintainable code with focus on logic and modern
+                practices.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                  <path d="M2 12h20"></path>
+                </svg>
+              </div>
+              <h4 class="highlight-title">AI &amp; Machine Learning</h4>
+              <p class="highlight-desc">Exploring intelligent computation, predictive models, and modern AI development
+                workflows.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                  </path>
+                </svg>
+              </div>
+              <h4 class="highlight-title">Project-Based Learning</h4>
+              <p class="highlight-desc">Strengthening technical problem-solving by building, testing, and refining
+                tangible applications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Skills -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Technical Competencies</span>
+          <h2 class="section-title">Skills &amp; Technologies</h2>
+          <p class="section-subtitle">Categorized initial competencies and tools used across academic coursework and
+            development projects.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: Programming -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="category-title">Programming</h3>
+            </div>
+            <p class="category-intro">Core languages utilized for procedural logic, algorithms, and object-oriented
+              modeling.</p>
+            <ul class="skill-pill-list">
+              <li class="skill-pill">
+                <span class="skill-bullet"></span>
+                <span>Python</span>
+              </li>
+              <li class="skill-pill">
+                <span class="skill-bullet"></span>
+                <span>C++</span>
+              </li>
+              <li class="skill-pill">
+                <span class="skill-bullet"></span>
+                <span>JavaScript</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 2: Web Development -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="category-title">Web Development</h3>
+            </div>
+            <p class="category-intro">Fundamental technologies for building responsive, accessible, and structured web
+              interfaces.</p>
+            <ul class="skill-pill-list">
+              <li class="skill-pill">
+                <span class="skill-bullet"></span>
+                <span>HTML5</span>
+              </li>
+              <li class="skill-pill">
+                <span class="skill-bullet"></span>
+                <span>CSS3</span>
+              </li>
+              <li class="skill-pill">
+                <span class="skill-bullet"></span>
+                <span>Responsive Design</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 3: Tools & Technologies -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="category-title">Tools &amp; Technologies</h3>
+            </div>
+            <p class="category-intro">Version control systems, modern code editors, and development environments.</p>
+            <ul class="skill-pill-list">
+              <li class="skill-pill">
+                <span class="skill-bullet"></span>
+                <span>Git</span>
+              </li>
+              <li class="skill-pill">
+                <span class="skill-bullet"></span>
+                <span>GitHub</span>
+              </li>
+              <li class="skill-pill">
+                <span class="skill-bullet"></span>
+                <span>VS Code</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="skills-disclaimer">
+          * Skills listed are draft academic competencies and will be continually updated as coursework and projects
+          advance.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 4: Projects -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Academic Coursework &bull; Lab Projects</span>
+          <h2 class="section-title">My Projects</h2>
+          <p class="section-subtitle">
+            The five key lab assignments and lecture projects designated in the Internal Assessment Project
+            specification.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Project Search & Filter Controls -->
+        <div class="projects-toolbar" role="search" aria-label="Project search and technology filter">
+          <div class="search-filter-row">
+            <!-- Search Input -->
+            <div class="search-box">
+              <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="search" id="project-search" class="project-search-input"
+                placeholder="Search projects by title, description, or tag (e.g. Python, Quiz, AI)..."
+                aria-label="Search projects by keyword" autocomplete="off">
+              <button type="button" id="search-clear-btn" class="search-clear-btn" aria-label="Clear search input"
+                style="display: none;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Technology Filter Dropdown -->
+            <div class="filter-box">
+              <label for="technology-filter" class="visually-hidden">Filter projects by technology</label>
+              <div class="select-wrapper">
+                <select id="technology-filter" class="technology-select" aria-label="Filter projects by technology">
+                  <option value="all">All Technologies</option>
+                  <option value="python">Python</option>
+                  <option value="javascript">JavaScript</option>
+                  <option value="html-css">HTML / CSS</option>
+                  <option value="ai-assisted">AI-assisted development</option>
+                  <option value="debugging">Debugging / Cursor AI</option>
+                </select>
+                <svg class="select-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Status Bar: Dynamic Count & Reset -->
+          <div class="toolbar-status-row">
+            <div class="results-count" id="results-count" aria-live="polite">
+              5 projects
+            </div>
+            <button type="button" id="reset-filters-btn" class="reset-filters-btn" style="display: none;"
+              aria-label="Reset search and filters">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                <polyline points="3 3 3 8 8 8"></polyline>
+              </svg>
+              <span>Reset Filters</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project Card 1 -->
+          <article class="project-card" data-technologies="python,algorithms,data structures">
+            <div class="project-card-header">
+              <span class="project-index">01</span>
+              <span class="project-category-tag">Core Python</span>
+            </div>
+
+            <div class="project-card-content">
+              <h3 class="project-title">Python Programs Collection</h3>
+              <p class="project-description">
+                A collection of Python programs, including factorial, Fibonacci, and structure-to-dictionary conversion,
+                with an updated README. Demonstrates foundational computational logic, sequence iteration, and data
+                transformation routines.
+              </p>
+
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Algorithms</span>
+                <span class="tech-tag">Data Structures</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <div class="project-link-group">
+                <span class="link-label">Repository:</span>
+                <a href="https://github.com/jatinjangir093-lgtm/python_basic_25bcon1380" target="_blank"
+                  rel="noopener noreferrer" class="project-link-btn"
+                  aria-label="View Python Programs Collection repository on GitHub">
+                  <span>View Repository</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="project-card" data-technologies="python,ai-assisted development">
+            <div class="project-card-header">
+              <span class="project-index">02</span>
+              <span class="project-category-tag">Refactoring &bull; AI</span>
+            </div>
+
+            <div class="project-card-content">
+              <h3 class="project-title">Messy Python Code Improvement</h3>
+              <p class="project-description">
+                A Python code-improvement exercise using AI assistance to make a messy script more readable and
+                maintainable. Focuses on code cleanliness, refactoring monolithic procedures into modular functions, and
+                adopting PEP 8 standards.
+              </p>
+
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">AI-assisted development</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <div class="project-link-group">
+                <span class="link-label">Repository:</span>
+                <a href="https://github.com/jatinjangir093-lgtm/correcting-grade-25BCON1380" target="_blank"
+                  rel="noopener noreferrer" class="project-link-btn"
+                  aria-label="View Messy Python Code Improvement repository on GitHub">
+                  <span>View Repository</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="project-card" data-technologies="programming,debugging,cursor ai">
+            <div class="project-card-header">
+              <span class="project-index">03</span>
+              <span class="project-category-tag">Debugging &bull; Tooling</span>
+            </div>
+
+            <div class="project-card-content">
+              <h3 class="project-title">Bug Fixing Using Cursor AI</h3>
+              <p class="project-description">
+                A debugging exercise involving identifying and correcting errors in a program using Cursor AI. Involves
+                diagnostic analysis, syntax and runtime error resolution, and verifying test cases with Cursor AI
+                pairing.
+              </p>
+
+              <div class="tech-tags">
+                <span class="tech-tag">Programming</span>
+                <span class="tech-tag">Debugging</span>
+                <span class="tech-tag">Cursor AI</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <div class="project-link-group">
+                <span class="link-label">Repository:</span>
+                <span class="pending-link-text" title="Repository confirmation pending">Repository link pending</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 4 -->
+          <article class="project-card" data-technologies="html,css,javascript">
+            <div class="project-card-header">
+              <span class="project-index">04</span>
+              <span class="project-category-tag">Web App &bull; Lecture 10</span>
+            </div>
+
+            <div class="project-card-content">
+              <h3 class="project-title">Interactive Quiz Application</h3>
+              <p class="project-description">
+                The interactive quiz application developed in Lecture 10. Features dynamic quiz generation,
+                multiple-choice question handling, immediate score calculation, and user performance review.
+              </p>
+
+              <div class="tech-tags">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <div class="project-link-group">
+                <span class="link-label">Repository:</span>
+                <a href="https://github.com/jatinjangir093-lgtm/QUIZ-PE" target="_blank" rel="noopener noreferrer"
+                  class="project-link-btn" aria-label="View Interactive Quiz Application repository on GitHub">
+                  <span>View Repository</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 5 -->
+          <article class="project-card" data-technologies="html,css,javascript">
+            <div class="project-card-header">
+              <span class="project-index">05</span>
+              <span class="project-category-tag">Web App &bull; Lecture 11</span>
+            </div>
+
+            <div class="project-card-content">
+              <h3 class="project-title">Book Reading List Application</h3>
+              <p class="project-description">
+                The reading-list application developed in Lecture 11. An interactive client-side application for
+                cataloging books, tracking reading statuses (want-to-read, reading, finished), and managing personal
+                logs.
+              </p>
+
+              <div class="tech-tags">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <div class="project-link-group">
+                <span class="link-label">Repository:</span>
+                <a href="https://github.com/jatinjangir093-lgtm/jatinjangir093-lgtmjatinjangir093-lgtm-Books_reading_list"
+                  target="_blank" rel="noopener noreferrer" class="project-link-btn"
+                  aria-label="View Book Reading List Application repository on GitHub">
+                  <span>View Repository</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Empty State Container -->
+        <div id="projects-empty-state" class="projects-empty-state" style="display: none;" role="status">
+          <div class="empty-state-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </div>
+          <h3 class="empty-state-title">No projects found</h3>
+          <p class="empty-state-text">
+            No projects match your search query and filter criteria. Try another keyword or clear your filters.
+          </p>
+          <button type="button" class="btn btn-secondary empty-reset-btn" id="empty-reset-btn">
+            <span>Clear All Filters</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Contact -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Get In Touch</span>
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">
+            Professional contact avenues and verified public profiles. Direct links below are active and ready to
+            connect.
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-cards-grid">
+          <!-- Email Channel -->
+          <div class="contact-channel-card">
+            <div class="channel-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="channel-info">
+              <span class="channel-type">Email Address</span>
+              <span class="channel-value placeholder-text">[Your Email to be added]</span>
+              <span class="channel-status-badge">Awaiting official email address</span>
+            </div>
+          </div>
+
+          <!-- GitHub Channel (Active Profile Link) -->
+          <a href="https://github.com/jatinjangir093-lgtm" class="contact-channel-card channel-link" target="_blank"
+            rel="noopener noreferrer" aria-label="Visit Jatin Jangir's GitHub Profile">
+            <div class="channel-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+            </div>
+            <div class="channel-info">
+              <span class="channel-type">GitHub Profile</span>
+              <span class="channel-value">github.com/jatinjangir093-lgtm</span>
+              <span class="channel-status-badge verified-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Verified Profile &nearr;
+              </span>
+            </div>
+          </a>
+
+          <!-- LinkedIn Channel (Active Profile Link) -->
+          <a href="https://www.linkedin.com/in/jatin-jangir-421511385/" class="contact-channel-card channel-link"
+            target="_blank" rel="noopener noreferrer" aria-label="Visit Jatin Jangir's LinkedIn Profile">
+            <div class="channel-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </div>
+            <div class="channel-info">
+              <span class="channel-type">LinkedIn Profile</span>
+              <span class="channel-value">linkedin.com/in/jatin-jangir-421511385</span>
+              <span class="channel-status-badge verified-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Verified Profile &nearr;
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <div class="contact-note-box">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <p>
+            Official GitHub and LinkedIn profile destinations are active. Email will be configured once official
+            academic contact details are provided in subsequent steps.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Section 6: Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-name">Jatin Jangir</span>
+        <span class="footer-divider">&bull;</span>
+        <span class="footer-copy">&copy; <span id="current-year">2026</span> All rights reserved.</span>
+      </div>
+
+      <div class="footer-center">
+        <span class="footer-tag">Internal Assessment Project &bull; Step 2</span>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://github.com/jatinjangir093-lgtm" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/jatin-jangir-421511385/" target="_blank"
+              rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <section class="chat-widget" aria-label="Portfolio assistant">
+    <div class="chat-panel" id="chat-panel" aria-labelledby="chat-title" hidden>
+      <div class="chat-header">
+        <div>
+          <h2 class="chat-title" id="chat-title">Portfolio Assistant</h2>
+          <p class="chat-subtitle">Ask about Jatin's portfolio</p>
+        </div>
+        <div class="chat-header-actions">
+          <button class="chat-icon-button" id="chat-new" type="button" aria-label="Start a new conversation"
+            title="New conversation">New chat</button>
+          <button class="chat-icon-button chat-close" id="chat-close" type="button" aria-label="Close chat"
+            title="Close chat">&times;</button>
+        </div>
+      </div>
+      <div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-relevant="additions text">
+        <p class="chat-message chat-message-assistant">Hi! Ask me about Jatin's education, skills, or projects.</p>
+      </div>
+      <p class="chat-status" id="chat-status" role="alert" hidden></p>
+      <form class="chat-form" id="chat-form">
+        <label class="visually-hidden" for="chat-input">Your message</label>
+        <textarea class="chat-input" id="chat-input" name="message" rows="2" maxlength="4000"
+          placeholder="Ask about the portfolio..." required></textarea>
+        <button class="chat-send" id="chat-send" type="submit">Send</button>
+      </form>
+      <p class="chat-hint">Enter to send &middot; Shift+Enter for a new line</p>
+    </div>
+    <button class="chat-launcher" id="chat-launcher" type="button" aria-expanded="false"
+      aria-controls="chat-panel">Chat with Jatin's assistant</button>
+  </section>
+
+  <!-- Vanilla JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
