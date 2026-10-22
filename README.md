@@ -89,7 +89,7 @@ The browser sends chat messages to the same-origin `/api/chat` Vercel serverless
 3. Run the website with Vercel's local development server so `/api/chat` is available:
 
    ```bash
-   npx vercel dev
+   https://jatin-personal-portfolio-iota.vercel.app/
    ```
 
    If prompted, install/login to the Vercel CLI as needed. Open the local URL printed by the command. A plain static server or opening `index.html` directly can display the page but cannot run the API endpoint.
