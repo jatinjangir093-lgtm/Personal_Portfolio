@@ -5,6 +5,10 @@
 **Current Milestone:** Portfolio chatbot integration
 
 ---
+## Screenshots
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/dc8ae33e-053c-4689-b97d-ac7efab0573d" />
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/1d34a270-c065-478f-baa1-2e2b3ac1681f" />
+
 
 ## 📌 Project Overview
 
